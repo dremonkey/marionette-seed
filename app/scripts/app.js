@@ -20,6 +20,7 @@ App.vent.on('app:log', function () {
 // was going to be displayed in it at runtime. It’s defined in the HTML markup.
 App.addRegions({
   header: '#site-header',
+  player: '#player',
   library: '#library',
   playlist: '#playlist',
   footer: '#site-footer'

@@ -11,11 +11,15 @@ var PlayerModel = Backbone.Model.extend({
   },
 
   initialize: function () {
-    App.on('song:play', this.play)
+    App.vent.on('song:play', this.play, this);
   },
 
   play: function (song) {
     this.set('song', song);
+  },
+
+  ended: function () {
+    App.vent.trigger('song:ended', this.model);
   }
 });
 
