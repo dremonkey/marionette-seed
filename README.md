@@ -1,4 +1,8 @@
+
 # Backbone Browserify Seed App
+
+## Description
+Backbone, Marionette, Browserify Seed App (work in progress)
 
 ## Getting Started
 ```npm install``` to install node module dependencies
