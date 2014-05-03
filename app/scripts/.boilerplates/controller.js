@@ -4,13 +4,14 @@
 var App = require('../../app');
 var Marionette = require('backbone.marionette');
 var Collection = require('./collection');
+var View = require('./view');
 
 // A Controller Controls the workflow and logic that exists at the application
 // level, above the implementation detail of views and models
 var Controller = Marionette.Controller.extend({
     
   initialize: function () {
-    App.vent.trigger('app:log', 'Load Collection');
+    App.vent.trigger('app:log', 'Load Collection', this);
     this.collections = new Collection();
   },
 

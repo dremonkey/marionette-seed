@@ -1,8 +1,15 @@
 'use strict';
 
 // Module Dependencies
+var $ = require('jquery');
 var Backbone = require('backbone');
 var Marionette = require('backbone.marionette');
+
+// Without declaring $ on Backbone and Marionette the app will fail to load
+// This is the accepted convention for require/modules to use a non-global $
+// @see https://github.com/jashkenas/backbone/pull/3038
+Backbone.$ = $;
+Marionette.$ = Backbone.$;
 
 var App = new Marionette.Application();
 
@@ -20,6 +27,7 @@ App.vent.on('app:log', function () {
 // was going to be displayed in it at runtime. It’s defined in the HTML markup.
 App.addRegions({
   header: '#site-header',
+  viz: '#viz',
   player: '#player',
   library: '#library',
   playlist: '#playlist',

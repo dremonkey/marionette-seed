@@ -11,7 +11,7 @@ var View = require('./playerView');
 var Controller = Marionette.Controller.extend({
     
   initialize: function () {
-    App.vent.trigger('app:log', 'Load Player Song');
+    App.vent.trigger('app:log', 'Load Player Controller');
     this.model = new Model();
   },
 
