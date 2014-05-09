@@ -2,9 +2,9 @@
 
 module.exports = {
   options: {
-    sassDir: 'app/styles',
-    imagesDir: 'app/images',
-    fontsDir: 'app/fonts',
+    sassDir: 'app/assets/styles',
+    imagesDir: 'app/assets/images',
+    fontsDir: 'app/assets/fonts',
     importPath: 'app/components/bootstrap-sass/vendor/assets/stylesheets',
     httpImagesPath: '/images',
     httpGeneratedImagesPath: '/images/generated',
