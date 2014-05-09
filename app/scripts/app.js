@@ -27,24 +27,14 @@ App.vent.on('app:log', function () {
 // was going to be displayed in it at runtime. It’s defined in the HTML markup.
 App.addRegions({
   header: '#site-header',
-  viz: '#viz',
-  player: '#player',
-  library: '#library',
-  playlist: '#playlist',
-  footer: '#site-footer'
+  viz: '#visualizer',
+  player: '#audioplayer',
 });
 
 App.on('initialize:before', function () {
 
   // Do stuff before view rendering
   App.vent.trigger('app:log', 'Initialize');
-
-  // Example Add Authorization Headers
-  // App.vent.trigger('app:log', 'App: Setting Request Headers');
-  // $.ajaxPrefilter(function (settings, _, jqXHR) {
-  //   jqXHR.setRequestHeader('X-Parse-Application-Id', 'voLazbq9nXuZuos9hsmprUz7JwM2N0asnPnUcI7r');
-  //   jqXHR.setRequestHeader('X-Parse-REST-API-Key', 'QC2F43aSAghM97XidJw8Qiy1NXlpL5LR45rhAVAf');
-  // });
 });
 
 App.on('initialize:after', function () {
